@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astrology retrograde status.</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <th>Planet</th>
+        <th>Date</th>
+        <th>Retrograde?</th>
+      </tr>
+      <% for (const planet in info) { %>
+        <tr>
+          <td><%= planet %></td>
+          <td>
+              <% for (const change of info[planet]) { %>
+                  <%= change.start.split("-").reverse().join(".") + "  -  " + change.end.split("-").reverse().join(".") %><br>
+                  <%= change.sign %><br>
+              <% } %>
+          </td>
+          <td><%= retrograde[planet] %></td>
+        </tr>
+        <% } %>
+    </table>
+  </body>
+</html>

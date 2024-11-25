@@ -1,0 +1,32 @@
+body {
+    margin-top: 10px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #add3b9;
+    display: flex;
+}
+
+
+table {
+  width: auto;
+  padding: 30px;
+  flex: auto;
+  text-align: center;
+  border-spacing: 5px;
+}
+
+tr,
+
+th {
+  padding: 10px;
+  background: #fbd784;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+td {
+  padding: 10px;
+  background: #f3e7c7;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #999;
+}
